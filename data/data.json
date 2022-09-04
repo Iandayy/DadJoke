@@ -1,0 +1,42 @@
+{
+  "userInfo": [
+    {
+      "id": 1,
+      "alias": "LipJ",
+      "key": "12",
+      "nice": [],
+      "bad": []
+    },
+    {
+      "id": 2,
+      "alias": "Monica",
+      "key": 12,
+      "nice": [],
+      "bad": []
+    },
+    {
+      "id": "vQ-ulkhOB",
+      "alias": "hi",
+      "key": "12",
+      "nice": [
+        "Why can't you use \"Beef stew\" as a password? Because it's not stroganoff."
+      ],
+      "bad": [
+        "Did you hear the one about the giant pickle?  He was kind of a big dill."
+      ]
+    },
+    {
+      "id": "2qZutjMoo",
+      "alias": "abc",
+      "key": "12",
+      "nice": [
+        "My sea sickness comes in waves.",
+        "Why do pumpkins sit on people’s porches?\r\n\r\nThey have no hands to knock on the door.",
+        "How do you fix a broken pizza? With tomato paste."
+      ],
+      "bad": [
+        "I'll tell you what often gets over looked... garden fences."
+      ]
+    }
+  ]
+}
