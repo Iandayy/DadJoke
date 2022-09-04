@@ -1,6 +1,6 @@
 import { useSetRecoilState, useRecoilValue } from "recoil";
-import randomColorState from "../../state/randomColorState";
 import styled from "styled-components";
+import randomColorState from "../../state/randomColorState";
 
 const Main = styled.main`
   display: flex;

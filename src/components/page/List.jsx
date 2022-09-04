@@ -1,12 +1,11 @@
 import { lazy } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
+import styled from "styled-components";
+import shortid from "shortid";
 import userInfoState from "../../state/userInfoState";
 import listPageState from "../../state/listPageState";
 
-import styled from "styled-components";
-import shortid from "shortid";
-import Button from "../ui/Button";
-
+const Button = lazy(() => import("../ui/Button"));
 const ListItem = lazy(() => import("./LIstItem"));
 
 const Title = styled.h2`

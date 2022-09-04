@@ -1,12 +1,10 @@
 import { lazy, useState } from "react";
-import { useSetRecoilState, useRecoilValue } from "recoil";
 import { useNavigate } from "react-router-dom";
-
+import { useSetRecoilState, useRecoilValue } from "recoil";
+import styled from "styled-components";
 import userInfoState from "../../state/usersAllState";
 import loginState from "../../state/loginState";
 import errorState from "../../state/errorState";
-
-import styled from "styled-components";
 
 const Button = lazy(() => import("../ui/Button"));
 const Card = lazy(() => import("../ui/Card"));

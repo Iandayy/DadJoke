@@ -2,7 +2,6 @@ import { lazy, useState } from "react";
 import { useRecoilValue } from "recoil";
 import axios from "axios";
 import styled from "styled-components";
-
 import userInfoState from "../../state/userInfoState";
 
 const Button = lazy(() => import("../ui/Button"));

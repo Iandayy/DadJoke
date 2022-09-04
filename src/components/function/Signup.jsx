@@ -1,10 +1,8 @@
 import { lazy, useState } from "react";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import axios from "axios";
-
 import styled from "styled-components";
 import shortid from "shortid";
-
 import usersAllState from "../../state/usersAllState";
 import errorState from "../../state/errorState";
 

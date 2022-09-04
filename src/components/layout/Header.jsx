@@ -1,6 +1,5 @@
 import { lazy, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import styled from "styled-components";
 
 const Button = lazy(() => import("../ui/Button"));
@@ -40,8 +39,6 @@ const Nav = styled.nav`
     cursor: pointer;
     width: 40px;
     height: 40px;
-    /* @media screen and (max-width: 390px) {
-    } */
   }
 `;
 

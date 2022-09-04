@@ -19,10 +19,14 @@
       "alias": "hi",
       "key": "12",
       "nice": [
-        "Why can't you use \"Beef stew\" as a password? Because it's not stroganoff."
+        "A steak pun is a rare medium well done.",
+        "What do you call an old snowman? Water.",
+        "Whenever the cashier at the grocery store asks my dad if he would like the milk in a bag he replies, ‘No, just leave it in the carton!’"
       ],
       "bad": [
-        "Did you hear the one about the giant pickle?  He was kind of a big dill."
+        "Did you hear the one about the giant pickle?  He was kind of a big dill.",
+        "Americans can't switch from pounds to kilograms overnight. That would cause mass confusion.",
+        "Why do bears have hairy coats? Fur protection."
       ]
     },
     {
@@ -36,6 +40,15 @@
       ],
       "bad": [
         "I'll tell you what often gets over looked... garden fences."
+      ]
+    },
+    {
+      "id": "x0NpnvRLf",
+      "alias": "v",
+      "key": "12",
+      "nice": [],
+      "bad": [
+        "What do prisoners use to call each other? Cell phones."
       ]
     }
   ]
