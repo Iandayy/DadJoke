@@ -4,6 +4,7 @@ const Btn = styled.button`
   width: 60px;
   height: 5vh;
   border: none;
+  border-radius: 1rem;
   cursor: pointer;
 `;
 

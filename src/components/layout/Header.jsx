@@ -17,6 +17,7 @@ const Logo = styled.h1`
 const Container1 = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 55px;
   span {
     text-align: end;
@@ -30,11 +31,13 @@ const Container2 = styled.div`
 
 const Info = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
+  align-items: center;
   img {
     cursor: pointer;
     width: 40px;

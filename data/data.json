@@ -10,46 +10,16 @@
     {
       "id": 2,
       "alias": "Monica",
-      "key": 12,
+      "key": "12",
       "nice": [],
       "bad": []
     },
     {
-      "id": "vQ-ulkhOB",
-      "alias": "hi",
-      "key": "12",
-      "nice": [
-        "A steak pun is a rare medium well done.",
-        "What do you call an old snowman? Water.",
-        "Whenever the cashier at the grocery store asks my dad if he would like the milk in a bag he replies, ‘No, just leave it in the carton!’"
-      ],
-      "bad": [
-        "Did you hear the one about the giant pickle?  He was kind of a big dill.",
-        "Americans can't switch from pounds to kilograms overnight. That would cause mass confusion.",
-        "Why do bears have hairy coats? Fur protection."
-      ]
-    },
-    {
-      "id": "2qZutjMoo",
-      "alias": "abc",
-      "key": "12",
-      "nice": [
-        "My sea sickness comes in waves.",
-        "Why do pumpkins sit on people’s porches?\r\n\r\nThey have no hands to knock on the door.",
-        "How do you fix a broken pizza? With tomato paste."
-      ],
-      "bad": [
-        "I'll tell you what often gets over looked... garden fences."
-      ]
-    },
-    {
-      "id": "x0NpnvRLf",
-      "alias": "v",
-      "key": "12",
+      "id": "aL4FO01sY",
+      "alias": "a",
+      "key": "a",
       "nice": [],
-      "bad": [
-        "What do prisoners use to call each other? Cell phones."
-      ]
+      "bad": []
     }
   ]
 }

@@ -46,7 +46,6 @@ const List = () => {
       ...page,
       [e.target.name]: Number(e.target.value) + 1,
     });
-    console.log(e.target.value);
   };
 
   const decrementHandler = (e) => {

@@ -45,16 +45,23 @@ const ListItem = ({ niceItem, badItem }) => {
       bad: [...badFilter],
     };
 
-    console.log(niceItem);
-    console.log(badItem);
-
     if (niceItem !== undefined) {
-      await axios.patch(`http://localhost:3001/userInfo/${userId}`, niceArr);
-      window.location.replace("/list");
+      try {
+        await axios.patch(`http://localhost:3001/userInfo/${userId}`, niceArr);
+        alert("The joke has been removed.");
+        window.location.replace("/list");
+      } catch (err) {
+        console.log("err", err);
+      }
     }
     if (badItem !== undefined) {
-      await axios.patch(`http://localhost:3001/userInfo/${userId}`, badArr);
-      window.location.replace("/list");
+      try {
+        await axios.patch(`http://localhost:3001/userInfo/${userId}`, badArr);
+        alert("The joke has been removed.");
+        window.location.replace("/list");
+      } catch (err) {
+        console.log("err", err);
+      }
     }
   };
 
