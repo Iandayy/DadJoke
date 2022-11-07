@@ -9,10 +9,10 @@ DadJoke는 나만의 농담 리스트 웹서비스입니다.
 ![HTML5](https://img.shields.io/badge/-HTML5-red)
 ![CSS3](https://img.shields.io/badge/-CSS3-blue)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
-![styled components](https://img.shields.io/badge/-styled%20components-violet)
 
 ![React](https://img.shields.io/badge/-React-a2d2ff)
 ![Recoil](https://img.shields.io/badge/-Recoil-black)
+![styled components](https://img.shields.io/badge/-styled%20components-violet)
 ![Axios](https://img.shields.io/badge/-Axios-blueviolet)
 
 
