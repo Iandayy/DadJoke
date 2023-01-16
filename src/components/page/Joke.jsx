@@ -72,7 +72,7 @@ const Joke = () => {
   const addNewJoke = async () => {
     const jokeText = await getDadJoke();
     setJoke(jokeText);
-    const res = await axios.get(`http://localhost:3001/userInfo/${userId}`);
+    const res = await axios.get(`http://localhost:8080/userInfo/${userId}`);
     setUserInfo(res.data);
   };
 
@@ -94,7 +94,7 @@ const Joke = () => {
       ...userInfo,
       nice: [...userInfo.nice, joke],
     };
-    await axios.patch(`http://localhost:3001/userInfo/${userInfo.id}`, item);
+    await axios.patch(`http://localhost:8080/userInfo/${userInfo.id}`, item);
   };
 
   const badHandler = async () => {
@@ -110,7 +110,7 @@ const Joke = () => {
       bad: [...userInfo.bad, joke],
     };
 
-    await axios.patch(`http://localhost:3001/userInfo/${userInfo.id}`, item);
+    await axios.patch(`http://localhost:8080/userInfo/${userInfo.id}`, item);
   };
 
   return (
