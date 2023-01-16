@@ -47,7 +47,7 @@ const ListItem = ({ niceItem, badItem }) => {
 
     if (niceItem !== undefined) {
       try {
-        await axios.patch(`http://localhost:3001/userInfo/${userId}`, niceArr);
+        await axios.patch(`http://localhost:8080/userInfo/${userId}`, niceArr);
         alert("The joke has been removed.");
         window.location.replace("/list");
       } catch (err) {
@@ -56,7 +56,7 @@ const ListItem = ({ niceItem, badItem }) => {
     }
     if (badItem !== undefined) {
       try {
-        await axios.patch(`http://localhost:3001/userInfo/${userId}`, badArr);
+        await axios.patch(`http://localhost:8080/userInfo/${userId}`, badArr);
         alert("The joke has been removed.");
         window.location.replace("/list");
       } catch (err) {
