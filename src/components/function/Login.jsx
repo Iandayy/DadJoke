@@ -2,7 +2,7 @@ import { lazy, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-import userInfoState from "../../state/usersAllState";
+import usersAllState from "../../state/usersAllState";
 import loginState from "../../state/loginState";
 import errorState from "../../state/errorState";
 
@@ -45,7 +45,7 @@ const Login = () => {
   });
 
   const setValue = useSetRecoilState(loginState);
-  const value = useRecoilValue(userInfoState);
+  const value = useRecoilValue(usersAllState);
   const serErr = useSetRecoilState(errorState);
   const err = useRecoilValue(errorState);
 
