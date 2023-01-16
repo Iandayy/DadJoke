@@ -1,11 +1,11 @@
 import { selector } from "recoil";
 
-import axios from "axios";
+import instance from "../service/request";
 
 const usersAllState = selector({
   key: "usersAllState",
   get: async () => {
-    const res = await axios.get("http://localhost:8080/userInfo");
+    const res = await instance.get("/");
     return res.data;
   },
 });

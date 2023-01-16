@@ -78,7 +78,7 @@ const Signup = () => {
       bad: [],
     };
     try {
-      await axios.post("http://localhost:3001/userInfo", item);
+      await axios.post("/", item);
       alert("Congratulations on your membership !");
       window.location.replace("/login");
     } catch {
