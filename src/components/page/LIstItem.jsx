@@ -1,7 +1,7 @@
 import { lazy, useState } from "react";
 import { useRecoilValue } from "recoil";
-import axios from "axios";
 import styled from "styled-components";
+import instance from "../../service/request";
 import userInfoState from "../../state/userInfoState";
 
 const Button = lazy(() => import("../ui/Button"));
@@ -47,7 +47,7 @@ const ListItem = ({ niceItem, badItem }) => {
 
     if (niceItem !== undefined) {
       try {
-        await axios.patch(`http://localhost:8080/userInfo/${userId}`, niceArr);
+        await instance.patch(`/${userId}`, niceArr);
         alert("The joke has been removed.");
         window.location.replace("/list");
       } catch (err) {
@@ -56,7 +56,7 @@ const ListItem = ({ niceItem, badItem }) => {
     }
     if (badItem !== undefined) {
       try {
-        await axios.patch(`http://localhost:8080/userInfo/${userId}`, badArr);
+        await instance.patch(`/${userId}`, badArr);
         alert("The joke has been removed.");
         window.location.replace("/list");
       } catch (err) {

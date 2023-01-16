@@ -1,9 +1,10 @@
 import { lazy, useState } from "react";
 import { useSetRecoilState, useRecoilValue } from "recoil";
-import axios from "axios";
 import styled from "styled-components";
+import instance from "../../service/request";
 import randomColorState from "../../state/randomColorState";
 import oneUserState from "../../state/oneUserState";
+import axios from "axios";
 
 const Button = lazy(() => import("../ui/Button"));
 
@@ -62,7 +63,7 @@ const Joke = () => {
   const getDadJoke = async () => {
     try {
       const config = { headers: { Accept: "application/json" } };
-      const res = await axios.get("https://icanhazdadjoke.com/", config);
+      const res = await axios.get(process.env.REACT_APP_JOKE_URL, config);
       return res.data.joke;
     } catch {
       return "No Joke, sorry";
@@ -72,7 +73,7 @@ const Joke = () => {
   const addNewJoke = async () => {
     const jokeText = await getDadJoke();
     setJoke(jokeText);
-    const res = await axios.get(`http://localhost:8080/userInfo/${userId}`);
+    const res = await instance.get(`/${userId}`);
     setUserInfo(res.data);
   };
 
@@ -94,7 +95,7 @@ const Joke = () => {
       ...userInfo,
       nice: [...userInfo.nice, joke],
     };
-    await axios.patch(`http://localhost:8080/userInfo/${userInfo.id}`, item);
+    await instance.patch(`/${userInfo.id}`, item);
   };
 
   const badHandler = async () => {
@@ -110,7 +111,7 @@ const Joke = () => {
       bad: [...userInfo.bad, joke],
     };
 
-    await axios.patch(`http://localhost:8080/userInfo/${userInfo.id}`, item);
+    await instance.patch(`/${userInfo.id}`, item);
   };
 
   return (
