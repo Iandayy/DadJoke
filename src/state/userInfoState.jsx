@@ -7,7 +7,6 @@ const userInfoState = selectorFamily({
   get: (id) => async () => {
     try {
       const res = await instance.get(`/${id}`);
-      console.log(res);
       return res.data;
     } catch (err) {
       console.log(err);
