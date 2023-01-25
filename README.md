@@ -15,7 +15,6 @@
 ![React](https://img.shields.io/badge/-React-a2d2ff)
 ![Recoil](https://img.shields.io/badge/-Recoil-black)
 ![styled components](https://img.shields.io/badge/-styled%20components-violet)
-![Axios](https://img.shields.io/badge/-Axios-blueviolet)
 
 
 <br />
