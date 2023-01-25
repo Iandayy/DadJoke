@@ -1,5 +1,5 @@
 # 💡 My DadJoke Preject :)
-DadJoke는 나만의 농담 리스트 웹서비스입니다.
+[DadJoke](https://dad-joke-ten.vercel.app/)는 나만의 농담 리스트 웹서비스입니다.
 <br />
 랜덤으로 보이는 농담이 좋았다면 good 버튼을, 재미없었다면 bad의 버튼을 통해 평가할 수 있습니다.
 <br />
