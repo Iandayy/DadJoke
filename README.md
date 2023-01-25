@@ -25,17 +25,6 @@
 
 git clone https://github.com/Iandayy/DadJoke
 
-### client
-
 cd client
 npm install
 npm start
-
-### server
-
-cd server
-cd data
-npm i -g json-server
-json-server --watch data.json --port 3001
-
-```   
