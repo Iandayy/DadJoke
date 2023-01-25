@@ -1,9 +1,11 @@
 import { lazy, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-import randomColorState from "../../state/randomColorState";
-import jokeState from "../../state/jokeState";
+import randomColorState from "../state/randomColorState";
+import jokeState from "../state/jokeState";
 import axios from "axios";
+import good from "../images/good.png";
+import bad from "../images/bad.png";
 
 const Button = lazy(() => import("../ui/Button"));
 
@@ -117,16 +119,8 @@ const Joke = () => {
         {isOk && (
           <>
             <SelectBtn>
-              <img
-                onClick={niceHandler}
-                src="https://img.icons8.com/external-creatype-outline-colourcreatype/64/000000/external-good-marketplace-outline-creatype-outline-colourcreatype.png"
-                alt="nice"
-              />
-              <img
-                onClick={badHandler}
-                src="https://img.icons8.com/external-creatype-outline-colourcreatype/64/000000/external-bad-marketplace-outline-creatype-outline-colourcreatype.png"
-                alt="bad"
-              />
+              <img onClick={niceHandler} src={good} alt="nice Img" />
+              <img onClick={badHandler} src={bad} alt="bad Img" />
             </SelectBtn>
             <Choice>
               {choice === "nice" && <span>(Choice Nice)</span>}

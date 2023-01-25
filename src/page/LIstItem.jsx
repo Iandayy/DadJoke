@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 
 import styled from "styled-components";
 
-import jokeState from "../../state/jokeState";
+import jokeState from "../state/jokeState";
 
 const Button = lazy(() => import("../ui/Button"));
 
