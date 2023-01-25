@@ -25,6 +25,5 @@
 
 git clone https://github.com/Iandayy/DadJoke
 
-cd client
 npm install
 npm start
