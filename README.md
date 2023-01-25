@@ -22,7 +22,7 @@
 ## 📂 실행방법
 ``` sh
 
-git clone https://github.com/Iandayy/DadJoke
+git clone -b local --single-branch https://github.com/Iandayy/DadJoke
 
 npm install
 npm start
