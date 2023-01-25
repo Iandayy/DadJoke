@@ -1,18 +1,15 @@
-import { selector } from "recoil";
+import { atom } from "recoil";
+import { recoilPersist } from "recoil-persist";
 
-import axios from "axios";
+const { persistAtom } = recoilPersist({
+  key: "recoil-persist",
+  storage: sessionStorage,
+});
 
-const jokeState = selector({
+const jokeState = atom({
   key: "jokeState",
-  get: async () => {
-    try {
-      const config = { headers: { Accept: "application/json" } };
-      const res = await axios.get(process.env.REACT_APP_JOKE_URL, config);
-      return res.data.joke;
-    } catch {
-      return "No Joke";
-    }
-  },
+  default: { nice: [], bad: [] },
+  effects_UNSTABLE: [persistAtom],
 });
 
 export default jokeState;

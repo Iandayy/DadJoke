@@ -1,8 +1,9 @@
 import { lazy, useState } from "react";
-import { useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
+
 import styled from "styled-components";
-import instance from "../../service/request";
-import userInfoState from "../../state/userInfoState";
+
+import jokeState from "../../state/jokeState";
 
 const Button = lazy(() => import("../ui/Button"));
 
@@ -15,60 +16,39 @@ const Container = styled.section`
   }
 `;
 
-// const DeleteBtn = styled.section``;
-
-const ListItem = ({ niceItem, badItem }) => {
-  const userId = localStorage.getItem("userId");
-
+const ListItem = ({ niceJoke, badJoke }) => {
+  const [userJoke, setUserJoke] = useRecoilState(jokeState);
   const [deleteBtn, setDeleteBtn] = useState(false);
-
-  const userInfo = useRecoilValue(userInfoState(userId));
 
   const deleteBtnHandler = () => {
     setDeleteBtn((prev) => !prev);
   };
 
-  const deleteHandler = async () => {
-    let niceFilter = userInfo.nice.filter(
-      (el) => userInfo.nice.indexOf(el) !== userInfo.nice.indexOf(niceItem)
-    );
-    let badFilter = userInfo.bad.filter(
-      (el) => userInfo.bad.indexOf(el) !== userInfo.bad.indexOf(badItem)
-    );
+  const deleteHandler = () => {
+    if (niceJoke) {
+      const deleteJoke = userJoke.nice.filter((joke) => joke !== niceJoke);
 
-    let niceArr = {
-      ...userInfo,
-      nice: [...niceFilter],
-    };
-    let badArr = {
-      ...userInfo,
-      bad: [...badFilter],
-    };
-
-    if (niceItem !== undefined) {
-      try {
-        await instance.patch(`/${userId}`, niceArr);
-        alert("The joke has been removed.");
-        window.location.replace("/list");
-      } catch (err) {
-        console.log("err", err);
-      }
+      let item = {
+        ...userJoke,
+        nice: deleteJoke,
+      };
+      setUserJoke(item);
     }
-    if (badItem !== undefined) {
-      try {
-        await instance.patch(`/${userId}`, badArr);
-        alert("The joke has been removed.");
-        window.location.replace("/list");
-      } catch (err) {
-        console.log("err", err);
-      }
+    if (badJoke) {
+      const deleteJoke = userJoke.bad.filter((joke) => joke !== badJoke);
+
+      let item = {
+        ...userJoke,
+        bad: deleteJoke,
+      };
+      setUserJoke(item);
     }
   };
 
   return (
     <Container>
-      <p onClick={deleteBtnHandler}>{niceItem}</p>
-      <p onClick={deleteBtnHandler}>{badItem}</p>
+      <p onClick={deleteBtnHandler}>{niceJoke}</p>
+      <p onClick={deleteBtnHandler}>{badJoke}</p>
       {deleteBtn && <Button onClick={deleteHandler}>delete</Button>}
     </Container>
   );

@@ -1,9 +1,8 @@
 import { lazy, useState } from "react";
-import { useSetRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-import instance from "../../service/request";
 import randomColorState from "../../state/randomColorState";
-import oneUserState from "../../state/oneUserState";
+import jokeState from "../../state/jokeState";
 import axios from "axios";
 
 const Button = lazy(() => import("../ui/Button"));
@@ -51,14 +50,12 @@ const Choice = styled.span`
 `;
 
 const Joke = () => {
-  const userId = localStorage.getItem("userId");
   const randomColor = useRecoilValue(randomColorState);
+  const [userJoke, setUserJoke] = useRecoilState(jokeState);
 
   const [joke, setJoke] = useState("");
   const [isOk, setIsOk] = useState(false);
   const [choice, setChoice] = useState("");
-  const setUserInfo = useSetRecoilState(oneUserState);
-  const userInfo = useRecoilValue(oneUserState);
 
   const getDadJoke = async () => {
     try {
@@ -73,8 +70,6 @@ const Joke = () => {
   const addNewJoke = async () => {
     const jokeText = await getDadJoke();
     setJoke(jokeText);
-    const res = await instance.get(`/${userId}`);
-    setUserInfo(res.data);
   };
 
   const jokeHandler = () => {
@@ -92,10 +87,10 @@ const Joke = () => {
     }, 2000);
 
     let item = {
-      ...userInfo,
-      nice: [...userInfo.nice, joke],
+      ...userJoke,
+      nice: [...userJoke.nice, joke],
     };
-    await instance.patch(`/${userInfo.id}`, item);
+    setUserJoke(item);
   };
 
   const badHandler = async () => {
@@ -107,11 +102,11 @@ const Joke = () => {
     }, 2000);
 
     let item = {
-      ...userInfo,
-      bad: [...userInfo.bad, joke],
+      ...userJoke,
+      bad: [...userJoke.bad, joke],
     };
 
-    await instance.patch(`/${userInfo.id}`, item);
+    setUserJoke(item);
   };
 
   return (
