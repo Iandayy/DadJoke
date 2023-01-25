@@ -51,6 +51,8 @@ const Choice = styled.span`
   margin-top: 20px;
 `;
 
+const REACT_APP_JOKE_URL = "https://icanhazdadjoke.com";
+
 const Joke = () => {
   const randomColor = useRecoilValue(randomColorState);
   const [userJoke, setUserJoke] = useRecoilState(jokeState);
@@ -62,7 +64,7 @@ const Joke = () => {
   const getDadJoke = async () => {
     try {
       const config = { headers: { Accept: "application/json" } };
-      const res = await axios.get(process.env.REACT_APP_JOKE_URL, config);
+      const res = await axios.get(REACT_APP_JOKE_URL, config);
       return res.data.joke;
     } catch {
       return "No Joke, sorry";
