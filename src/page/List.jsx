@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 import shortid from "shortid";
-import jokeState from "../../state/jokeState";
+import jokeState from "../state/jokeState";
 
 const ListItem = lazy(() => import("./LIstItem"));
 

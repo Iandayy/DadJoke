@@ -1,9 +1,9 @@
 import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-const Home = lazy(() => import("../../components/page/Home"));
-const Joke = lazy(() => import("../../components/page/Joke"));
-const List = lazy(() => import("../../components/page/List"));
+const Home = lazy(() => import("../page/Home"));
+const Joke = lazy(() => import("../page/Joke"));
+const List = lazy(() => import("../page/List"));
 
 const Router = () => {
   return (

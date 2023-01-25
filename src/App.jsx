@@ -1,9 +1,9 @@
 import { lazy } from "react";
 
-import Router from "./components/layout/Router";
+import Router from "./layout/Router";
 
-const Header = lazy(() => import("./components/layout/Header"));
-const Footer = lazy(() => import("./components/layout/Footer"));
+const Header = lazy(() => import("./layout/Header"));
+const Footer = lazy(() => import("./layout/Footer"));
 
 const App = () => {
   return (
